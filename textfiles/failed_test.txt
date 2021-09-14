@@ -1,0 +1,176 @@
+from openpyxl import Workbook
+from openpyxl import load_workbook
+from openpyxl.styles import PatternFill, Border, Side, Alignment, Protection, Font
+# workbook = Workbook()
+workbook = load_workbook(filename="hello_world.xlsx")
+sheet = workbook.active
+# workbook.iso_dates = True
+
+
+# days = ["Monday","Tuesday","Wdnesday","Thursday","Friday","Saturday","Sunday"]
+
+# for i in range(1,31):
+#     cellref=sheet.cell(row=1, column=i)
+#     cellref.fill = PatternFill("solid", fgColor="DDDDDD")
+#     if(i<10):
+#         cellref.value="01/0"+str(i)+"/2021"
+#     else:
+#         cellref.value="01/"+str(i)+"/2021"    
+
+
+
+def adding_dates():
+    
+    row_start=2
+  
+    option1 = input("\n\nenter Qual: ")
+    option2 = int(input("enter start date: "))
+    option3 = int(input("enter start date: "))
+
+    for i in range(option2,option3+1):
+        cellref2=sheet.cell(row=row_start,column=i)
+        rowref = sheet[row_start+1:row_start+3]
+        if cellref2.value:
+            cellref2 = sheet.cell(row = row_start+1,column=i)
+        if (option1 == "Qual1"):
+            cellref2.fill = PatternFill("solid", fgColor="6666CC")  
+        elif (option1 == "Qual2"):
+            cellref2.fill = PatternFill("solid", fgColor="33CCCC")
+        elif (option1 == "Qual3"):
+            cellref2.fill = PatternFill("solid", fgColor="FF8080")
+        cellref2.value=option1
+
+adding_dates()
+
+# def adding_dates():
+    
+#     row_start=2
+#     row_end = row_start+4
+#     rows = sheet[row_start:row_end]
+#     option1 = input("enter Qual: ")
+#     option2 = int(input("enter start date: "))
+#     option3 = int(input("enter start date: "))
+
+#     for i in range(option2,option3+1):
+#         cellref2=sheet[rows:i]
+#         if cellref2.value:
+#             cellref2 = sheet.cell(row = row_start+1,column=i)
+#         if (option1 == "Qual1"):
+#             cellref2.fill = PatternFill("solid", fgColor="6666CC")  
+#         elif (option1 == "Qual2"):
+#             cellref2.fill = PatternFill("solid", fgColor="33CCCC")
+            
+#         cellref2.value=option1
+
+# adding_dates()
+
+
+#-------------------------------------------------------------------------------------------------------------#
+
+# option2 = int(input("enter start date: "))
+# option3 = int(input("enter end date: "))
+
+# def firstloop(start_row=2):
+#     for cols in sheet.iter_cols(min_row=start_row,min_col = option2, max_col=option3, max_row=start_row):
+#         #If theres no values
+#         for cell in cols:
+#             cellref = cell
+#             if cell.value:
+#                 start_row = start_row+5
+#                 secondloop(start_row)
+#             else:
+#                 cell.value="bittittle" 
+#                 for cols in sheet.iter_cols(min_row=start_row+1,min_col = option2, max_col=option3, max_row=start_row+4):
+#                     for cell in cols:
+#                         cell.value="----"
+
+# def secondloop(start_row):
+#     for cols in sheet.iter_cols(min_row=start_row,min_col = option2, max_col=option3, max_row=start_row):
+#         #if value was detected
+#         for cell in cols:
+#             cell.value="Skittle"
+#             for cols in sheet.iter_cols(min_row=start_row+1,min_col = option2, max_col=option3, max_row=start_row+4):
+#                     for cell in cols:
+#                         cell.value="*****"
+
+# firstloop()
+
+#-----------------------------------------------------------------------------------------------------------------@
+# option1 = input("Enter Qual: ")
+# option2 = int(input("enter start date: "))
+# option3 = int(input("enter end date: "))
+
+
+
+
+
+
+# def firstloop(start_row):
+#     end_row = start_row+3
+#     for cols in sheet.iter_cols(min_row=start_row,min_col = option2, max_col=option3, max_row=end_row):
+#         #If theres no values
+#         for cell in cols:
+#             cellref = cell.row
+#             print(cellref)
+#             if cellref == start_row:
+#                 if cell.value:
+#                     start_row = start_row+5
+#                     firstloop(start_row)
+#                 else:
+#                     cell.value= option1
+                    
+#             else:
+#                 cell.value= option1
+                    
+               
+
+# def secondloop(start_row):
+#     for cols in sheet.iter_rows(min_row=start_row,min_col = option2, max_col=option3, max_row=start_row):
+#         #if value was detected
+#         for cell in cols:
+#             cell.value="Skittle"
+#             for cols in sheet.iter_rows(min_row=start_row+1,min_col = option2, max_col=option3, max_row=start_row+4):
+#                     for cell in cols:
+#                         cell.value="*****"
+                        
+
+
+
+#--------------------------------------------------------------------------------------------------------#
+
+# def firstloop(start_row):
+#     end_row = start_row+3
+#     for cols in sheet.iter_cols(min_row=start_row,min_col = option2, max_col=option3, max_row=end_row):
+#         #If theres no values
+#         for cell in cols:
+#             cellref = cell.row
+#             print(cellref)
+#             if cellref == start_row:
+#                 if cell.value:
+#                     new_row = start_row+5
+#                     secondloop(new_row)
+#                 else:
+#                     cell.value= option1
+                    
+#             else:
+#                 cell.value= option1
+
+# def secondloop(new_row):
+#     end_row = new_row+3
+#     for cols in sheet.iter_cols(min_row=new_row,min_col = option2, max_col=option3, max_row=end_row):
+#         #If theres no values
+#         for cell in cols:
+#             cellref = cell.row
+#             print(cellref)
+#             if cellref == new_row:
+#                 if cell.value:
+#                     new_row = new_row+5
+#                     secondloop(new_row)
+#                 else:
+#                     cell.value= option1
+                    
+#             else:
+#                 cell.value= option1
+
+# firstloop(2)
+workbook.save(filename="hello_world.xlsx")

@@ -1,0 +1,53 @@
+#MOST PROMISING METHOD SO FAR
+
+def title_add():
+    col_index = 1
+    row_index=1
+
+    blank_col_index = col_index
+    blank_row_index=row_index+1
+    
+
+    cellref = sheet.cell(row=row_index,column=col_index)
+
+    blank_cellref = sheet.cell(row=row_index+1,column=col_index)
+    blank_cellref2 = sheet.cell(row=row_index+2,column=col_index)
+    blank_cellref3 = sheet.cell(row=row_index+3,column=col_index)
+    blank_cellref4 = sheet.cell(row=row_index+4,column=col_index)
+    print(cellref.coordinate)
+
+    
+    des_col=6
+    total_index = 0
+    while col_index < des_col:
+        
+        while cellref.value:
+            row_index+=1
+            cellref = sheet.cell(row=row_index,column=col_index)
+            blank_cellref = sheet.cell(row=row_index+1,column=col_index)
+            blank_cellref2 = sheet.cell(row=row_index+2,column=col_index)
+            blank_cellref3 = sheet.cell(row=row_index+3,column=col_index)
+            blank_cellref4 = sheet.cell(row=row_index+4,column=col_index)
+            print("Title = " + cellref.coordinate)
+            print("blank = " + blank_cellref.coordinate)            
+        else:
+            cellref.value="new"+str(total_index)
+            blank_cellref.value="------"
+            blank_cellref2.value="------"
+            blank_cellref3.value="------"
+            blank_cellref4.value="------"
+            total_index+=1
+            print("Title = " + cellref.coordinate)
+            print("blank = " + blank_cellref.coordinate)
+        col_index+=1
+        # blank_col_index+=1
+        row_index=1   
+        cellref = sheet.cell(row=row_index,column=col_index)
+        blank_cellref = sheet.cell(row=row_index+1,column=col_index)
+        blank_cellref2 = sheet.cell(row=row_index+2,column=col_index)
+        blank_cellref3 = sheet.cell(row=row_index+3,column=col_index)
+        blank_cellref4 = sheet.cell(row=row_index+4,column=col_index)
+
+
+
+title_add()
