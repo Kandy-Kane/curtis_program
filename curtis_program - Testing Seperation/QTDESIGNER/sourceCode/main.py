@@ -36,17 +36,17 @@ import traceback
 class AppDemo(QMainWindow):
     def __init__(self):
         super().__init__()
-        uic.loadUi('../ver1.ui',self)
+        uic.loadUi('curtis_program - Testing Seperation/QTDESIGNER/ver1.ui',self)
         # global finishedLabel
         # global failedLabel
         global statusWidget
         statusWidget = self.stackedWidget_2
         global movie
-        self.movie = QMovie("./images/spinning.gif")
+        self.movie = QMovie("curtis_program - Testing Seperation/QTDESIGNER/images/spinning.gif")
         self.label_10.setMovie(self.movie)
         self.movie.start()
         global movie2
-        self.movie2 = QMovie("./images/loading4.gif")
+        self.movie2 = QMovie("curtis_program - Testing Seperation/QTDESIGNER/images/loading4.gif")
         self.label_6.setMovie(self.movie2)
         self.movie2.start()
         self.stackedWidget_2.setCurrentWidget(self.page_8)
@@ -104,7 +104,7 @@ class AppDemo(QMainWindow):
 
 
         global mainemployeeslist
-        with open('../textFiles/employees.txt') as f:
+        with open('curtis_program - Testing Seperation/QTDESIGNER/textFiles/employees.txt') as f:
             mainemployeeslist = [line.rstrip() for line in f]
         for item in mainemployeeslist:
             self.thumbListWidget.insertItem(0,item)

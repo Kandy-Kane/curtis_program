@@ -583,11 +583,11 @@ class Worker2(QObject):
             # messagebox.showwarning(title="Error Occured", message="something went wrong in Second Add Month. Check your entries and try again")
             # if path.exists("../textFiles/errors.txt") == TRUE:
             #     ct = datetime.datetime.now() 
-            #     with open("../textFiles/errors.txt", "a") as file:
+            #     with open("curtis_program - Testing Seperation/QTDESIGNER/textFiles/errors.txt", "a") as file:
             #         file.write("\n"+str(ct)+"\n"+str(traceback.format_exc()))
             # else:
             #     ct = datetime.datetime.now() 
-            #     with open("../textFiles/errors.txt", "x") as file:
+            #     with open("curtis_program - Testing Seperation/QTDESIGNER/textFiles/errors.txt", "x") as file:
             #         file.write("\n"+str(ct)+"\n"+str(traceback.format_exc()))
 
 
@@ -1130,11 +1130,11 @@ class Worker2(QObject):
             # messagebox.showwarning(title="Error Occured", message="something went wrong in ADD QUAL.\nCheck your entries and try again.\nFor a more detailed explanation check errors txt file")
             # if path.exists("../textFiles/errors.txt") == TRUE:
             #     ct = datetime.datetime.now() 
-            #     with open("../textFiles/errors.txt", "a") as file:
+            #     with open("curtis_program - Testing Seperation/QTDESIGNER/textFiles/errors.txt", "a") as file:
             #         file.write("\n"+str(ct)+"\n"+str(traceback.format_exc()))
             # else:
             #     ct = datetime.datetime.now() 
-            #     with open("../textFiles/errors.txt", "x") as file:
+            #     with open("curtis_program - Testing Seperation/QTDESIGNER/textFiles/errors.txt", "x") as file:
             #         file.write("\n"+str(ct)+"\n"+str(traceback.format_exc()))
 
 
@@ -1292,11 +1292,11 @@ class Worker2(QObject):
             # messagebox.showwarning(title="Error Occured", message="something went wrong in EXISTING BOOK. Check your entries and try again")
             # if path.exists("../textFiles/errors.txt") == TRUE:
             #     ct = datetime.datetime.now() 
-            #     with open("../textFiles/errors.txt", "a") as file:
+            #     with open("curtis_program - Testing Seperation/QTDESIGNER/textFiles/errors.txt", "a") as file:
             #         file.write("\n"+str(ct)+"\n"+str(traceback.format_exc()))
             # else:
             #     ct = datetime.datetime.now() 
-            #     with open("../textFiles/errors.txt", "x") as file:
+            #     with open("curtis_program - Testing Seperation/QTDESIGNER/textFiles/errors.txt", "x") as file:
             #         file.write("\n"+str(ct)+"\n"+str(traceback.format_exc()))
    
 

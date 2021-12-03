@@ -291,9 +291,9 @@ class Worker(QObject):
             # messagebox.showwarning(title="Error Occured", message="something went wrong in NEW BOOK. Check your entries and try again")
             # if path.exists("../textFiles/errors.txt") == True:
             #     ct = datetime.datetime.now() 
-            #     with open("../textFiles/errors.txt", "a") as file:
+            #     with open("curtis_program - Testing Seperation/QTDESIGNER/textFiles/errors.txt", "a") as file:
             #         file.write("\n"+str(ct)+"\n"+str(traceback.format_exc()))
             # else:
             #     ct = datetime.datetime.now() 
-            #     with open("../textFiles/errors.txt", "x") as file:
+            #     with open("curtis_program - Testing Seperation/QTDESIGNER/textFiles/errors.txt", "x") as file:
             #         file.write("\n"+str(ct)+"\n"+str(traceback.format_exc()))     
