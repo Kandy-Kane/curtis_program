@@ -567,7 +567,7 @@ class Worker2(QObject):
                 # datesLabel = Label(gui.tab1frame3,text = "Total Number of Dates Affected: "+str(submitTotal),font="Helvetica 8 bold", fg="black",bg="grey26")
                 # submittedLabel.grid(row=1,column=0,ipadx=50)
                 # datesLabel.grid(row = 2, column=0)
-                submitTotal+=1
+                #submitTotal+=1
 
             # if monthCheck == True:
             #     global sheet

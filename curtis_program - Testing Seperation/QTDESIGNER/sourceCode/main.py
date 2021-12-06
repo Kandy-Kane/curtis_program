@@ -380,12 +380,12 @@ class AppDemo(QMainWindow):
             self.stackedWidget_2.setCurrentWidget(self.page_12)
             return
 
-        if globalVars.page1Qual == 0 and self.isHoliday.isChecked() == False:
+        if globalVars.page1Qual == '0' or globalVars.blockName == '0' and self.isHoliday.isChecked() == False:
             self.stackedWidget_2.setCurrentWidget(self.page_12)
             return
-        if globalVars.blockName == 0 and self.isHoliday.isChecked() ==False:
-            self.stackedWidget_2.setCurrentWidget(self.page_12)
-            return 
+        # if globalVars.blockName == 0 and self.isHoliday.isChecked() ==False:
+        #     self.stackedWidget_2.setCurrentWidget(self.page_12)
+        #     return 
 
         if path.exists(str(globalVars.page1e1)) != True:
             self.stackedWidget_2.setCurrentWidget(self.page_7)
@@ -548,6 +548,7 @@ class AppDemo(QMainWindow):
         
 
     def launchDialog(self):
+        os.chdir(r'curtis_program - Testing Seperation/QTDESIGNER/outputExcel')
         file_Filter = 'Data File (*.xlsx *.csv *.dat);; Excel File (*.xlsx *.xls)'
         filePath,_ = QFileDialog.getOpenFileName(
             parent=self,
