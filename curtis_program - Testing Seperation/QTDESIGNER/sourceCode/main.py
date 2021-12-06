@@ -57,7 +57,7 @@ class AppDemo(QMainWindow):
         self.addFullQualButton.clicked.connect(self.showPage4)
         self.addMirsButton.clicked.connect(self.daKinter)
 
-        
+        print('\nCWD:'+os.getcwd()+'\n')
         self.scrollArea.setWidgetResizable(False)
         self.scrollArea_2.widgetResizable()
         self.scrollArea_2.setWidgetResizable(True)
@@ -332,7 +332,7 @@ class AppDemo(QMainWindow):
 
         #E1
         # print(globalVars.page1e1)
-        globalVars.page1e1 = self.fileNameLine.text()
+        globalVars.page1e1 = 'curtis_program - Testing Seperation/QTDESIGNER/outputExcel/'+self.fileNameLine.text()
         globalVars.page1e1 = str(globalVars.page1e1)
         print(globalVars.page1e1)
 
@@ -520,7 +520,8 @@ class AppDemo(QMainWindow):
 
 #PAGE5======================================ADD MIRS======================================================
     def daKinter(self):
-        subprocess.Popen(['python' , 'ver8.py'])
+        #os.chdir(r'curtis_program - Testing Seperation/QTDESIGNER/sourceCode')
+        subprocess.Popen(['python' ,'curtis_program - Testing Seperation/QTDESIGNER/sourceCode/ver8.py'])
 
 #EXTRAS===================================================================================================
 
@@ -548,12 +549,12 @@ class AppDemo(QMainWindow):
         
 
     def launchDialog(self):
-        os.chdir(r'curtis_program - Testing Seperation/QTDESIGNER/outputExcel')
+        #os.chdir(r'curtis_program - Testing Seperation/QTDESIGNER/outputExcel')
         file_Filter = 'Data File (*.xlsx *.csv *.dat);; Excel File (*.xlsx *.xls)'
         filePath,_ = QFileDialog.getOpenFileName(
             parent=self,
             caption="Select File",
-            directory=os.getcwd(),
+            directory='curtis_program - Testing Seperation/QTDESIGNER/outputExcel',
             filter=file_Filter,
             initialFilter='Excel File (*.xlsx *.xls)'
         )
@@ -582,12 +583,12 @@ class AppDemo(QMainWindow):
         
 
     def launchDialogPage4(self):
-        os.chdir(r'curtis_program - Testing Seperation/QTDESIGNER/inputExcel')
+        #os.chdir(r'curtis_program - Testing Seperation/QTDESIGNER/inputExcel')
         file_Filter = 'Data File (*.xlsx *.csv *.dat);; Excel File (*.xlsx *.xls)'
         filePath,_ = QFileDialog.getOpenFileName(
             parent=self,
             caption="Select File",
-            directory=os.getcwd(),
+            directory='curtis_program - Testing Seperation/QTDESIGNER/inputExcel',
             filter=file_Filter,
             initialFilter='Excel File (*.xlsx *.xls)'
         )
@@ -599,12 +600,12 @@ class AppDemo(QMainWindow):
         self.page4ReadFrom.setText(ReadFrom)
 
     def launchDialogPage4_2(self):
-        os.chdir(r'curtis_program - Testing Seperation/QTDESIGNER/outputExcel')
+        #os.chdir(r'curtis_program - Testing Seperation/QTDESIGNER/outputExcel')
         file_Filter = 'Data File (*.xlsx *.csv *.dat);; Excel File (*.xlsx *.xls)'
         filePath,_ = QFileDialog.getOpenFileName(
             parent=self,
             caption="Select File",
-            directory=os.getcwd(),
+            directory='curtis_program - Testing Seperation/QTDESIGNER/outputExcel',
             filter=file_Filter,
             initialFilter='Excel File (*.xlsx *.xls)'
         )
